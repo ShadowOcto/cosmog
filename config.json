@@ -1,0 +1,9 @@
+{
+    "name": "cosmog",
+    "version": "1.0.0",
+    "build": "Release",
+    "token": "",
+    "status_webhook": "",
+    "logs_webhook": "",
+    "alerts_webhook": ""
+}
