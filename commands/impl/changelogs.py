@@ -33,9 +33,10 @@ class PageButtons(nextcord.ui.View):
 def refresh_changelogs():
     global pages
     pages.clear()
-    for log in os.listdir('./changelogs/'):
+    for log in os.listdir('./crimdex/changelogs/'):
         version = log.split('.txt')[0]
-        pages.append({"version": version, "logs": open('./changelogs/' + log).read()})
+        pages.append({"id": int(version.replace(".", "")), "version": version, "logs": open('./crimdex/changelogs/' + log).read()})
+    pages.sort(key=lambda x: x["id"])
     pages.reverse()
 
 def get_page_string(page: int):
