@@ -35,7 +35,7 @@ def refresh_changelogs():
     pages.clear()
     for log in os.listdir('./changelogs/'):
         version = log.split('.txt')[0]
-        pages.append({"id": int(version.replace(".", "")), "version": version, "logs": open('./crimdex/changelogs/' + log).read()})
+        pages.append({"id": int(version.replace(".", "")), "version": version, "logs": open('./changelogs/' + log).read()})
     pages.sort(key=lambda x: x["id"])
     pages.reverse()
 
